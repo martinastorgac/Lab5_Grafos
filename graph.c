@@ -63,7 +63,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
         edge_aux = list_next(listAdjacency) ;
     }
 
-    return NULL ;
+    return -1  ;
 
         
         
