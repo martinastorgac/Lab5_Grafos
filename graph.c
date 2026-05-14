@@ -55,7 +55,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     Edge *edge_aux = list_first(listAdjacency) ;
     while (edge_aux != NULL)
     {
-        if (strcmp(edge_aux->target == label2) == 0)
+        if (strcmp(edge_aux->target, label2) == 0)
         {
             return edge_aux->weight ;
         }
