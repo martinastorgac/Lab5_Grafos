@@ -6,3 +6,34 @@ Fri May  8 10:07:21 PM UTC 2026:
  tests:  0|6
 ========================================
 36e8bf5
+Thu May 14 08:23:26 PM UTC 2026: 
+ graph.c | 25 ++++++++++++++++++++++++-
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:52:20: error: initialization of ‘Map *’ from incompatible pointer type ‘MapPair *’ [-Wincompatible-pointer-types]
+   52 |     Map* map_aux = map_search(g->adjacencyMap, (void*) label1) ;
+      |                    ^~~~~~~~~~
+graph.c:54:34: error: invalid use of incomplete typedef ‘Map’
+   54 |     List *listAdjacency = map_aux->value;
+      |                                  ^~
+graph.c:58:37: error: passing argument 1 of ‘strcmp’ makes pointer from integer without a cast [-Wint-conversion]
+   58 |         if (strcmp(edge_aux->target == label2) == 0)
+      |                    ~~~~~~~~~~~~~~~~~^~~~~~~~~
+      |                                     |
+      |                                     int
+In file included from test.c:3:
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/string.h:156:32: note: expected ‘const char *’ but argument is of type ‘int’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |                    ~~~~~~~~~~~~^~~~
+graph.c:58:13: error: too few arguments to function ‘strcmp’
+   58 |         if (strcmp(edge_aux->target == label2) == 0)
+      |             ^~~~~~
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/string.h:156:12: note: declared here
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |            ^~~~~~
+graph.c:66:12: error: returning ‘void *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Wint-conversion]
+   66 |     return NULL ;
+      |            ^~~~
+69bad64
