@@ -106,3 +106,13 @@ Fri May 15 06:55:27 PM UTC 2026:
  1 file changed, 1 insertion(+), 2 deletions(-)
  tests:  0|0
 cd17b30
+Fri May 15 07:04:43 PM UTC 2026: 
+ graph.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:32:27: error: invalid use of incomplete typedef ‘Map’
+   32 |     newGraph->adjacencyMap->ls = list_create() ;
+      |                           ^~
+9912ae8
