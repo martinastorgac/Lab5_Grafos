@@ -116,3 +116,24 @@ graph.c:32:27: error: invalid use of incomplete typedef ‘Map’
    32 |     newGraph->adjacencyMap->ls = list_create() ;
       |                           ^~
 9912ae8
+Fri May 15 07:09:50 PM UTC 2026: 
+ graph.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:41: error: ‘is_equal’ undeclared (first use in this function)
+   31 |     newGraph->adjacencyMap = map_create(is_equal, lower_than) ;
+      |                                         ^~~~~~~~
+graph.c:31:41: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:31:51: error: ‘lower_than’ undeclared (first use in this function)
+   31 |     newGraph->adjacencyMap = map_create(is_equal, lower_than) ;
+      |                                                   ^~~~~~~~~~
+graph.c:31:30: error: too many arguments to function ‘map_create’
+   31 |     newGraph->adjacencyMap = map_create(is_equal, lower_than) ;
+      |                              ^~~~~~~~~~
+In file included from graph.c:8:
+map.h:14:6: note: declared here
+   14 | Map *map_create(int (*is_equal)(void *key1, void *key2)); // unsorted map
+      |      ^~~~~~~~~~
+c995dfe
