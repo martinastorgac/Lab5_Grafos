@@ -157,3 +157,23 @@ Sat May 16 10:23:12 PM UTC 2026:
  1 file changed, 11 insertions(+), 1 deletion(-)
  tests:  0|0
 350f2d2
+Sat May 16 11:00:18 PM UTC 2026: 
+ graph.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:38:47: error: passing argument 2 of ‘map_search’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   38 |     MapPair*par = map_search(g->adjacencyMap, label) ;
+      |                                               ^~~~~
+In file included from graph.c:8:
+map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *’
+   22 | MapPair *map_search(Map *map, void *key);
+      |                               ~~~~~~^~~
+graph.c: In function ‘addEdge’:
+graph.c:54:48: error: ‘label’ undeclared (first use in this function)
+   54 |     MapPair *par = map_search(g->adjacencyMap, label) ;
+      |                                                ^~~~~
+graph.c:54:48: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+a553089
