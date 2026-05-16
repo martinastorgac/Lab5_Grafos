@@ -177,3 +177,14 @@ graph.c:54:48: error: ‘label’ undeclared (first use in this function)
 graph.c:54:48: note: each undeclared identifier is reported only once for each function it appears in
 cc1: all warnings being treated as errors
 a553089
+Sat May 16 11:00:56 PM UTC 2026: 
+ graph.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:54:55: error: ‘label’ undeclared (first use in this function)
+   54 |     MapPair *par = map_search(g->adjacencyMap, (void*)label) ;
+      |                                                       ^~~~~
+graph.c:54:55: note: each undeclared identifier is reported only once for each function it appears in
+836dc90
